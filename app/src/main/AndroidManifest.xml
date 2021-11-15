@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProActivity">
-        <activity
-            android:name=".Activity2"
-            android:exported="false" />
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="false"
+            android:exported="false">
+
+        </receiver>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,6 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button1 = findViewById(R.id.btn);
+        button1 = findViewById(R.id.btn1);
 
         spinner_list_items = getResources().getStringArray(R.array.spinneritems);
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent1,intent2,intent3;
 
         if(activity.equals("act1")){
-            intent1 = new Intent(this, Activity2.class);
+            intent1 = new Intent(this, BroadcastReceiver.class);
             startActivity(intent1);
         }
     }

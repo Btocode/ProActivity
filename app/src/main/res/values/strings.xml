@@ -3,10 +3,8 @@
     <string name="click">click</string>
 
     <string-array name = "spinneritems">
-        <item>Activity 1</item>
-        <item>Activity 2</item>
-        <item>Activity 3</item>
-        <item>Activity 4</item>
-        <item>Activity 5</item>
+        <item>Custom broadcast receiver</item>
+        <item>Wifi RTT state change receiver</item>
+        <item>System battery notification receiver</item>
     </string-array>
 </resources>
