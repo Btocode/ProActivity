@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">ProActivity</string>
     <string name="click">click</string>
+
+    <string-array name = "spinneritems">
+        <item>Activity 1</item>
+        <item>Activity 2</item>
+        <item>Activity 3</item>
+        <item>Activity 4</item>
+        <item>Activity 5</item>
+    </string-array>
 </resources>
