@@ -19,20 +19,38 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         button1 = findViewById(R.id.btn1);
-
         spinner_list_items = getResources().getStringArray(R.array.spinneritems);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-
+        Spinner spinner = findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.sample_view, R.id.tvs,spinner_list_items);
         spinner.setAdapter(adapter);
-        button1.setOnClickListener(v -> changeActivity("act1"));
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String state = spinner.getSelectedItem().toString();
+                changeActivity(state);
+            }
+        });
+
+
+
+
+
     }
     public void changeActivity(String activity){
-        Intent intent1,intent2,intent3;
+        Intent intent;
 
-        if(activity.equals("act1")){
-            intent1 = new Intent(this, BroadcastReceiver.class);
-            startActivity(intent1);
+        if(activity.equals("Custom broadcast receiver")){
+            intent = new Intent(this, CustomBroadcast.class);
+            startActivity(intent);
         }
+        else if(activity.equals("Wifi RTT state change receiver")){
+            intent = new Intent(this, WifiRttReceiver.class);
+            startActivity(intent);
+        }
+        else{
+            intent = new Intent(this, SystemBatteryNotificationReceiver.class);
+            startActivity(intent);
+        }
+
     }
 }

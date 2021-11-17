@@ -9,13 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProActivity">
-        <receiver
-            android:name=".MyReceiver"
-            android:enabled="false"
-            android:exported="false">
-
-        </receiver>
-
+        <activity
+            android:name=".SystemBatteryNotificationReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".WifiRttReceiver"
+            android:exported="false" />
+        <activity
+            android:name=".CustomBroadcast"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
